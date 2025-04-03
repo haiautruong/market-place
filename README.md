@@ -16,26 +16,30 @@ A modern marketplace application built with React 19, TypeScript, Vite, and Ant 
 
 ```
 market-place/
-├── client/           # React frontend application
-│   ├── public/       # Public assets
-│   ├── src/          # Source files
-│   │   ├── assets/   # Static assets
-│   │   ├── App.tsx   # Main App component
-│   │   ├── App.css   # App-specific styles
-│   │   ├── main.tsx  # Entry point
-│   │   └── index.css # Global styles
-│   ├── .eslintrc.cjs # ESLint configuration
-│   ├── .prettierrc   # Prettier configuration
-│   └── ...
-└── README.md         # Project documentation
+├── web/             # Frontend application
+│   ├── public/      # Public assets
+│   ├── src/         # Source files
+│   ├── .env         # Environment variables
+│   ├── index.html   # Entry HTML file
+│   ├── package.json # Frontend dependencies
+│   ├── tailwind.config.ts # Tailwind CSS config
+│   ├── tsconfig.json # TypeScript config
+│   └── vite.config.ts # Vite configuration
+├── server/          # Backend application
+│   ├── raw-data/    # Raw data files
+│   ├── model.ts     # Data models
+│   ├── server.js    # Server entry point
+│   ├── db.json      # JSON database
+│   └── package.json # Backend dependencies
+└── README.md        # Project documentation
 ```
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18.0.0 or later)
-- npm or yarn
+- Node.js (v20.0.0 or later)
+- pnpm (recommended) or npm
 
 ### Installation
 
@@ -49,26 +53,40 @@ cd market-place
 2. Install dependencies
 
 ```bash
-cd client
-npm install
+# Install frontend dependencies
+cd web
+pnpm install
+
+# Install backend dependencies
+cd ../server
+pnpm install
 ```
 
-3. Start the development server
+3. Start the development servers
 
 ```bash
-npm run dev
+# Start the backend server (from server directory)
+pnpm start
+
+# In a new terminal, start the frontend (from web directory)
+pnpm dev
 ```
 
 4. Open your browser and navigate to `http://localhost:5173`
 
 ## Available Scripts
 
-- `npm run dev` - Starts the development server
-- `npm run build` - Builds the app for production
-- `npm run lint` - Runs ESLint to check for code issues
-- `npm run format` - Formats code using Prettier
-- `npm run format:check` - Checks if all files are properly formatted
-- `npm run preview` - Preview the production build locally
+### Frontend (in web directory)
+
+- `pnpm dev` - Starts the development server
+- `pnpm build` - Builds the app for production
+- `pnpm lint` - Runs ESLint to check for code issues
+- `pnpm preview` - Preview the production build locally
+
+### Backend (in server directory)
+
+- `pnpm start` - Starts the backend server
+- `pnpm dev` - Starts the server in development mode
 
 ## License
 
