@@ -1,0 +1,196 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@layer base {
+  html,
+  body {
+    @apply bg-[#15171D] text-white;
+    font-family: "Inter", sans-serif;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gradient-text {
+    background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+  }
+
+  .gradient-border {
+    position: relative;
+    border-radius: 4px;
+  }
+
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .font-drone {
+    font-family: "DroneRangerPro", sans-serif;
+    font-weight: bold;
+  }
+}
+/* Custom Input Styles */
+.ant-input::placeholder,
+.ant-input-affix-wrapper::placeholder {
+  color: #89888b;
+}
+.ant-input,
+.ant-input-affix-wrapper {
+  color: white;
+  background: transparent !important;
+}
+
+/* Custom Button Styles */
+.ant-btn-primary {
+  background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+  border: none;
+  color: white;
+  transition: none;
+}
+
+.ant-btn-primary:hover {
+  background: #da34dd !important;
+  box-shadow: 0 0 6px 0 #da34dd;
+}
+
+/* Custom Slider Styles */
+.custom-slider {
+  padding: 10px 0;
+
+  /* Track styles */
+  .ant-slider-rail {
+    @apply !bg-[#3A3841];
+    height: 8px;
+    border-radius: 2px;
+  }
+
+  .ant-slider-track {
+    background: linear-gradient(
+      91.47deg,
+      #da458f -6%,
+      #da34dd 113.05%
+    ) !important;
+    height: 8px !important;
+    border-radius: 2px;
+  }
+
+  /* Handle styles */
+  .ant-slider-handle {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    box-shadow: 0px 0px 16px 3px #da40a387;
+    border: 1px solid #fff !important;
+  }
+
+  .ant-slider-handle::after,
+  .ant-slider-handle::before,
+  .ant-slider-handle:hover:before,
+  .ant-slider-handle:hover::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    inset: 3px !important;
+    border-radius: 50%;
+    box-shadow: none;
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        #f643e4 0%,
+        rgba(255, 84, 238, 0) 100%
+      ),
+      radial-gradient(
+        50% 50% at 50% 50%,
+        #ffffff 0%,
+        rgba(255, 84, 238, 0) 100%
+      ),
+      radial-gradient(
+        50% 50% at 50% 50%,
+        #f643e4 0%,
+        rgba(255, 84, 238, 0) 100%
+      );
+  }
+
+  .ant-slider-handle:hover {
+    box-shadow: 0 0 25px 8px rgba(218, 69, 143, 0.8) !important;
+  }
+
+  /* Handle when dragging */
+  .ant-slider-handle-dragging {
+    box-shadow: 0 0 25px 8px rgba(218, 69, 143, 0.8) !important;
+  }
+
+  /* Remove focus styles */
+  .ant-slider-handle:focus,
+  .ant-slider-handle:hover {
+    box-shadow: 0 0 20px 5px rgba(218, 69, 143, 0.7);
+  }
+
+  .ant-slider-handle:focus::after,
+  .ant-slider-handle:hover::after {
+    width: 16px;
+    height: 16px;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.ant-slider:hover .ant-slider-handle::after {
+  box-shadow: none;
+}
+
+/* Custom Select Styles */
+.ant-select {
+  height: 44px;
+  width: 100%;
+}
+
+.ant-select-selector {
+  height: 44px;
+  width: 100%;
+  border: 1px solid #3a3841 !important;
+  background: transparent !important;
+}
+
+.ant-select-selection-item {
+  line-height: 44px;
+  color: white;
+}
+
+.ant-select-selection-search-input {
+  height: 44px;
+}
+
+/* Tooltip styles */
+.ant-tooltip-inner {
+  background: linear-gradient(
+    91.47deg,
+    #da458f -6%,
+    #da34dd 113.05%
+  ) !important;
+}
+
+.ant-tooltip-arrow:before {
+  background: linear-gradient(
+    91.47deg,
+    #da458f -6%,
+    #da34dd 113.05%
+  ) !important;
+}
