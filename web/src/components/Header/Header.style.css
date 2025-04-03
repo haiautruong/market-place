@@ -1,0 +1,39 @@
+.ant-layout-header {
+  background-color: #17161ab2;
+}
+
+.nav-link {
+  font-weight: 500;
+  position: relative;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: "DroneRangerPro", sans-serif;
+}
+
+.nav-link.active {
+  background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 16px;
+  height: 2px;
+  background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  background-color: rgba(23, 22, 26, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
