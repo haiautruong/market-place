@@ -38,7 +38,7 @@ const ProductCard: React.FC<IProduct> = ({
   tier,
 }) => {
   return (
-    <div className="group relative rounded-lg bg-[#3A384199] p-4 transition-all duration-300 hover:shadow-[0_0_6px_#FF54EE] cursor-pointer">
+    <div className="product-card group relative rounded-lg bg-[#3A384199] p-4 transition-all duration-300 hover:shadow-[0_0_6px_#FF54EE] cursor-pointer">
       {/* Category Badge */}
       <div className="absolute z-1 left-6 top-6">
         <span className="rounded bg-[#313B4580] px-3 py-1 text-xs text-white">

@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#17161A] py-16 text-white">
+    <footer data-testid="footer" className="bg-[#17161A] py-16 text-white">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_2fr] xl:gap-20 lg:gap-16 md:gap-16 gap-12">
         {/* Navigation Section */}
         <div>

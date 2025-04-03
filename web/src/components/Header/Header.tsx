@@ -31,7 +31,10 @@ const Header: React.FC = () => {
   };
 
   return (
-    <AntHeader className="absolute flex items-center top-0 z-1 w-full !h-14 lg:!h-16 xl:!h-20 !p-0">
+    <AntHeader
+      data-testid="footer"
+      className="absolute flex items-center top-0 z-1 w-full !h-14 lg:!h-16 xl:!h-20 !p-0"
+    >
       <div className="container mx-auto flex justify-between items-center">
         {/* Mobile menu button */}
         <div className="lg:hidden">

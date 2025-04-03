@@ -21,7 +21,7 @@ function App() {
       <ConfigProvider theme={theme}>
         <Layout className="min-h-screen w-full">
           <Header />
-          <Content>
+          <Content data-testid="outlet">
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 {ROUTE_CONFIG.map((route) => (

@@ -18,11 +18,6 @@ const LanguageSwitcher: React.FC = () => {
       onClick: () => changeLanguage("en"),
     },
     {
-      key: "es",
-      label: t("language.spanish"),
-      onClick: () => changeLanguage("es"),
-    },
-    {
       key: "fr",
       label: t("language.french"),
       onClick: () => changeLanguage("fr"),
@@ -42,8 +37,6 @@ const LanguageSwitcher: React.FC = () => {
     switch (i18n.language) {
       case "en":
         return "EN";
-      case "es":
-        return "ES";
       case "fr":
         return "FR";
       default:

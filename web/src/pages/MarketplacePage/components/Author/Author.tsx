@@ -1,7 +1,7 @@
 import React from "react";
-import { IAuthor } from "../../../../services/product";
 import onlineIcon from "./assets/online.svg";
 import busyIcon from "./assets/busy.svg";
+import { IAuthor } from "../../../../types/product";
 
 const onlineStatusMap: Record<IAuthor["onlineStatus"], string> = {
   online: onlineIcon,
