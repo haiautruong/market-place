@@ -1,0 +1,46 @@
+{
+  "header": {
+    "HOME": "Home",
+    "ABOUT_US": "About Us",
+    "OUR_TEAMS": "Our Teams",
+    "MARKETPLACE": "Marketplace",
+    "ROADMAP": "Roadmap",
+    "WHITEPAPER": "Whitepaper",
+    "connectWallet": "Connect Wallet"
+  },
+  "pages": {
+    "home": {
+      "title": "Home Page",
+      "content": "Welcome to our NFT Marketplace"
+    },
+    "about": {
+      "title": "About Page",
+      "content": "Learn more about our platform"
+    },
+    "teams": {
+      "title": "Teams Page",
+      "content": "Meet our team members"
+    },
+    "marketplace": {
+      "title": "Marketplace Page",
+      "content": "Explore and trade NFTs"
+    },
+    "roadmap": {
+      "title": "Roadmap Page",
+      "content": "Our plans for the future"
+    },
+    "whitepaper": {
+      "title": "Whitepaper Page",
+      "content": "Technical documentation"
+    },
+    "notFound": {
+      "title": "404 Not Found",
+      "content": "The page you're looking for doesn't exist.",
+      "backHome": "Back to Home"
+    }
+  },
+  "language": {
+    "english": "English",
+    "french": "French"
+  }
+}

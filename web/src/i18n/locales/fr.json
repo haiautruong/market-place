@@ -1,0 +1,46 @@
+{
+  "header": {
+    "HOME": "Accueil",
+    "ABOUT_US": "À Propos",
+    "OUR_TEAMS": "Notre Équipe",
+    "MARKETPLACE": "Marché",
+    "ROADMAP": "Feuille de Route",
+    "WHITEPAPER": "Livre Blanc",
+    "connectWallet": "Connecter le Portefeuille"
+  },
+  "pages": {
+    "home": {
+      "title": "Page d'Accueil",
+      "content": "Bienvenue sur notre Marché NFT"
+    },
+    "about": {
+      "title": "Page À Propos",
+      "content": "En savoir plus sur notre plateforme"
+    },
+    "teams": {
+      "title": "Page de l'Équipe",
+      "content": "Rencontrez les membres de notre équipe"
+    },
+    "marketplace": {
+      "title": "Page du Marché",
+      "content": "Explorez et échangez des NFT"
+    },
+    "roadmap": {
+      "title": "Page de la Feuille de Route",
+      "content": "Nos plans pour l'avenir"
+    },
+    "whitepaper": {
+      "title": "Page du Livre Blanc",
+      "content": "Documentation technique"
+    },
+    "notFound": {
+      "title": "404 Non Trouvé",
+      "content": "La page que vous recherchez n'existe pas.",
+      "backHome": "Retour à l'Accueil"
+    }
+  },
+  "language": {
+    "english": "Anglais",
+    "french": "Français"
+  }
+}
