@@ -2,36 +2,36 @@
 
 A modern marketplace application built with React 19, TypeScript, Vite, and Ant Design.
 
-## Features
-
-- Built with React 19 using the latest features including the `use` hook
-- TypeScript for type safety
-- Vite for fast development and optimized builds
-- Ant Design for UI components
-- ESLint for code linting
-- Prettier for code formatting
-- Responsive design for all devices
+Check out the demo at the following link: [Demo](https://market-place-e14f.onrender.com/marketplace)
 
 ## Project Structure
 
 ```
 market-place/
-├── web/             # Frontend application
-│   ├── public/      # Public assets
-│   ├── src/         # Source files
-│   ├── .env         # Environment variables
-│   ├── index.html   # Entry HTML file
-│   ├── package.json # Frontend dependencies
-│   ├── tailwind.config.ts # Tailwind CSS config
-│   ├── tsconfig.json # TypeScript config
-│   └── vite.config.ts # Vite configuration
-├── server/          # Backend application
-│   ├── raw-data/    # Raw data files
-│   ├── model.ts     # Data models
-│   ├── server.js    # Server entry point
-│   ├── db.json      # JSON database
-│   └── package.json # Backend dependencies
-└── README.md        # Project documentation
+├── web/                    # Frontend application
+│   ├── public/             # Public assets
+│   ├── src/                # Source files
+│   ├── .env                # Environment variables
+│   ├── index.html          # Entry HTML file
+│   ├── package.json        # Frontend dependencies
+│   ├── tailwind.config.ts  # Tailwind CSS config
+│   ├── tsconfig.json       # TypeScript config
+│   ├── vite.config.js      # Vite configuration
+│   ├── vitest.config.js    # Vitest configuration
+│   ├── Dockerfile          # Frontend Docker configuration
+│   ├── nginx.conf          # Nginx configuration for Docker
+│   ├── eslint.config.js    # ESLint configuration
+│   ├── playwright.config.js # Playwright test configuration
+│   └── coverage/           # Test coverage reports
+├── server/                 # Backend application
+│   ├── raw-data/           # Raw data files
+│   ├── model.ts            # Data models
+│   ├── server.js           # Server entry point
+│   ├── db.json             # JSON database
+│   ├── package.json        # Backend dependencies
+│   └── Dockerfile          # Backend Docker configuration
+├── docker-compose.yaml     # Docker Compose configuration
+└── README.md               # Project documentation
 ```
 
 ## Getting Started
@@ -86,7 +86,50 @@ pnpm dev
 ### Backend (in server directory)
 
 - `pnpm start` - Starts the backend server
-- `pnpm dev` - Starts the server in development mode
+
+## Docker Setup
+
+### Prerequisites
+
+- Docker
+- Docker Compose
+
+### Running with Docker
+
+1. Build and start the containers
+
+```bash
+# From the project root
+docker-compose up --build
+```
+
+This command builds and starts both the frontend and backend containers:
+
+- Frontend will be available at `http://localhost:8080`
+- Backend API will be available at `http://localhost:5005`
+
+2. Run in detached mode (optional)
+
+```bash
+docker-compose up -d
+```
+
+3. Stop the containers
+
+```bash
+docker-compose down
+```
+
+### Development with Docker
+
+The Docker setup includes:
+
+- A Node.js container for the backend API
+- A multi-stage build for the frontend:
+  - Build stage using Node.js
+  - Production stage using Nginx to serve static files
+
+Environment variables like `VITE_API_BASE_URL` can be configured in the `docker-compose.yaml` file.
 
 ## License
 
