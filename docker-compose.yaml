@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: "http://localhost:5005"
+    ports:
+      - "8080:80" # assuming you're using Nginx in web Dockerfile
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "5005:5005"
